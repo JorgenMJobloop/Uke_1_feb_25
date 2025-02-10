@@ -28,24 +28,22 @@ class Program
         Storage<Test> storage1 = new Storage<Test>();
         Console.WriteLine(storage1);
 
+
         CreateTextFile createTextFile = new CreateTextFile();
-        createTextFile.CreateNewTextFile("my_text.txt");
+        // filepath the name of our file in the working directory
+        createTextFile.CreateNewFile("new_text.txt");
+        createTextFile.WriteContent("new_text.txt", "This is my text content");
+        createTextFile.ReadBytes("Csharp_copy.png");
+        GenericMethods genericMethods = new GenericMethods();
+        genericMethods.Add<double>(2, 3);
+        double[] values = { 1, 2, 3, 4 };
+        string[] stringValues = { "Hello", "C#", "Strings!" };
+        Console.WriteLine(genericMethods.AddRange(values));
+        genericMethods.PrintValues(stringValues);
+        genericMethods.Concat("Hello", "World!");
 
-        createTextFile.WriteContent("my_text.txt", "Hello C#!");
 
-        // Example List vs ArrayList
+        CustomGeneric<int, string, int> customGeneric = new CustomGeneric<int, string, int>();
 
-        // List<string> strings = new List<string>();
-        // strings.Add("Hello");
-
-
-        // List<object> similiarToArrayList = new List<object>();
-        // similiarToArrayList.Add(3);
-        // similiarToArrayList.Add("World!");
-
-        // ArrayList arrayList = new ArrayList();
-        // arrayList.Add("Hello");
-        // arrayList.Add(3);
-        // arrayList.Add(null);
     }
 }

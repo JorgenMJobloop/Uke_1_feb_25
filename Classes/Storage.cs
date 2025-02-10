@@ -15,4 +15,5 @@ public class Storage<T> : IStorage<T>
     {
         data = value;
     }
+
 }

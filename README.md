@@ -11,7 +11,6 @@ public void DocstringExample()
 {
     Console.WriteLine("Hello, World!");
 }
-
 ```
 
 # Generic Classes
